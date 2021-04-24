@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
+import viteVue from './plugins/vite.vue'
+import viteCompression from './plugins/vite.compression'
+import viteImagemin from './plugins/vite.imagemin'
+
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [viteImagemin(), viteCompression(), viteVue()]
 })
